@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Echocardiography Report</title>
+    <title>Echocardiography Form</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Echocardiography Report</h1>
+        <h1>Echocardiography Data Form</h1>
 
         <form id="echoForm">
             <div class="grid-container">
@@ -38,34 +38,29 @@
                     <input type="number" id="ef_simpson" name="ef_simpson"><br>
                     <label for="e_a">E/A:</label>
                     <input type="text" id="e_a" name="e_a"><br>
-                    <label for="diastolic_function">Diastolic Function:</label>
+                    <label for="diastolic_function">Diastolic function:</label>
                     <input type="text" id="diastolic_function" name="diastolic_function"><br>
                 </div>
-
                 <div class="grid-item">
                     <h2>Aorta</h2>
                     <label for="lvot_anulus">LVOT/Anulus (mm):</label>
                     <input type="number" id="lvot_anulus" name="lvot_anulus"><br>
                     <label for="sinus">Sinus (mm):</label>
                     <input type="number" id="sinus" name="sinus"><br>
-                    <label for="ac_aorta">Ac Aorta (mm):</label>
+                    <label for="ac_aorta">Ac aorta (mm):</label>
                     <input type="number" id="ac_aorta" name="ac_aorta"><br>
-                    <h2>Left Atrium</h2>
-                    <label for="la_diametr">LA Diametr (mm):</label>
+                    <label for="la_diametr">LA diametr (mm):</label>
                     <input type="number" id="la_diametr" name="la_diametr"><br>
-                    <label for="la_volume">LA Volume:</label>
+                    <label for="la_volume">LA volume:</label>
                     <input type="number" id="la_volume" name="la_volume"><br>
                     <label for="lavi">LAVI:</label>
                     <input type="number" id="lavi" name="lavi"><br>
-                    <h2>Pulmonary Vein</h2>
                     <label for="basal">Basal (mm):</label>
                     <input type="number" id="basal" name="basal"><br>
                     <label for="mid">Mid (mm):</label>
                     <input type="number" id="mid" name="mid"><br>
-                    <label for="pp">PP:</label>
-                    <input type="text" id="pp" name="pp"><br>
-                    <label for="diametr">Diametr:</.label>
-                    <input type="text" id="diametr" name="diametr"><br>
+                    <label for="diametr">Diametr:</label>
+                    <input type="number" id="diametr" name="diametr"><br>
                     <label for="acct">ACCT (ms):</label>
                     <input type="number" id="acct" name="acct"><br>
                     <label for="la_sp">LA SP (mm rt.st):</label>
@@ -74,13 +69,13 @@
             </div>
 
             <div class="observations">
-                <label for="mk_zminen">MK - не змінений:</label>
+                <label for="mk_zminen">МК - не змінений:</label>
                 <input type="text" id="mk_zminen" name="mk_zminen"><br>
-                <label for="ak_zminen">AK - не змінений:</label>
+                <label for="ak_zminen">АК - не змінений:</label>
                 <input type="text" id="ak_zminen" name="ak_zminen"><br>
-                <label for="tk_regurgitatsiya">TK - Регургітація:</label>
+                <label for="tk_regurgitatsiya">ТК - Регургітація.:</label>
                 <input type="text" id="tk_regurgitatsiya" name="tk_regurgitatsiya"><br>
-                <label for="kl_la_zminen">Kl LA - не змінений:</label>
+                <label for="kl_la_zminen">Кл.ЛА - не змінений:</label>
                 <input type="text" id="kl_la_zminen" name="kl_la_zminen"><br>
                 <label for="lokalna_skorotliva">Локальна скоротлива здатність:</label>
                 <input type="text" id="lokalna_skorotliva" name="lokalna_skorotliva"><br>
@@ -88,7 +83,7 @@
                 <input type="text" id="perikard" name="perikard"><br>
             </div>
 
-            <button type="button" onclick="saveWord()">Save as Word</button>
+            <button type="button" onclick="sendEmail()">Send Email</button>
         </form>
     </div>
 
