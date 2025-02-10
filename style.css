@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background color */
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -11,7 +11,7 @@ body {
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -21,12 +21,12 @@ h1 {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
 .grid-item {
-    border: 1px solid #ccc; /* Light border for sections */
+    border: 1px solid #ccc;
     padding: 10px;
 }
 
@@ -37,17 +37,30 @@ label {
 
 input[type="number"],
 input[type="text"] {
-    width: calc(100% - 10px); /* Full width within container */
+    width: calc(100% - 10px);
     padding: 8px;
     margin-bottom: 10px;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
     border: 1px solid #ccc;
 }
 
 .observations {
     margin-top: 20px;
-    border: 1px solid #ccc; /* Light border for observations */
+    border: 1px solid #ccc;
     padding: 10px;
 }
 
 button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
