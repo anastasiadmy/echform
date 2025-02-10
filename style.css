@@ -1,3 +1,4 @@
+/* Basic styles (same as previous examples) */
 body {
     font-family: sans-serif;
     margin: 0;
@@ -53,14 +54,4 @@ input[type="text"] {
 button {
     padding: 10px 20px;
     background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
-}
+    color: white
