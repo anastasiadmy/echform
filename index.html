@@ -10,6 +10,16 @@
     <div class="container">
         <h1>Echocardiography Report</h1>
 
+        <div class="calculator-inputs">
+            <h2>BSA Calculator</h2>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight">
+            <button type="button" onclick="calculateBSA()">Calculate BSA</button>
+            <div id="bsa-result">BSA: <span id="bsa"></span> m²</div>
+        </div>
+
         <form id="echoForm">
             <div class="grid-container">
                 <div class="grid-item">
@@ -19,21 +29,21 @@
                     <label for="lvesd">LVESD (mm):</label>
                     <input type="number" id="lvesd" name="lvesd"><br>
                     <label for="edv">EDV (ml) (Teichholz):</label>
-                    <input type="number" id="edv" name="edv"><br>
+                    <input type="number" id="edv" name="edv" readonly><br>
                     <label for="esv">ESV (ml) (Teichholz):</label>
-                    <input type="number" id="esv" name="esv"><br>
+                    <input type="number" id="esv" name="esv" readonly><br>
                     <label for="sv">SV (ml) (Teichholz):</label>
-                    <input type="number" id="sv" name="sv"><br>
+                    <input type="number" id="sv" name="sv" readonly><br>
                     <label for="ivsd">IVSd (mm):</label>
                     <input type="number" id="ivsd" name="ivsd"><br>
                     <label for="lvpwd">LVPWd (mm):</label>
                     <input type="number" id="lvpwd" name="lvpwd"><br>
                     <label for="rwt">RWT:</label>
-                    <input type="number" id="rwt" name="rwt"><br>
+                    <input type="number" id="rwt" name="rwt" readonly><br>
                     <label for="lvmi">LV Mass Index (g/m²):</label>
-                    <input type="number" id="lvmi" name="lvmi"><br>
+                    <input type="number" id="lvmi" name="lvmi" readonly><br>
                     <label for="ef_teichholz">EF (Teichholz) (%):</label>
-                    <input type="number" id="ef_teichholz" name="ef_teichholz"><br>
+                    <input type="number" id="ef_teichholz" name="ef_teichholz" readonly><br>
                     <label for="ef_simpson">EF Simpson (%):</label>
                     <input type="number" id="ef_simpson" name="ef_simpson"><br>
                     <label for="e_a">E/A:</label>
@@ -54,7 +64,7 @@
                     <label for="la_volume">LA volume:</label>
                     <input type="number" id="la_volume" name="la_volume"><br>
                     <label for="lavi">LAVI:</label>
-                    <input type="number" id="lavi" name="lavi"><br>
+                    <input type="number" id="lavi" name="lavi" readonly><br>
                     <label for="basal">Basal (mm):</label>
                     <input type="number" id="basal" name="basal"><br>
                     <label for="mid">Mid (mm):</label>
@@ -85,7 +95,7 @@
                 <input type="text" id="perikard" name="perikard"><br>
             </div>
 
-            <button type="button" onclick="sendEmail()">Send Email</button>
+            <button type="button" onclick="calculateAll()">Calculate All</button>
         </form>
     </div>
 
