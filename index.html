@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,6 +98,10 @@
                     </select></td>
                 <label for="ak_zminen">АК:</label>
                 <input type="text" id="ak_zminen" name="ak_zminen"><br>
+
+                    <label for="ak_max_grad">АК макс град і шв:</label>
+                    <input type="number" id="ak_max_grad" name="ak_max_grad"><br>
+                    <input type="number" id="ak_max_grad" name="ak_max_grad"><br>
                                 
                 <td colspan="2">Стулки кількість: <select name="m_reg">
                         <option value="dd1">--</option>
@@ -117,15 +122,40 @@
                         <option value="dd3">помірна регургітація</option>
                         <option value="dd">важка регургітація</option>
                     </select></td>
+
                 <label for="tk_regurgitatsiya">ТК:</label>
-                <input type="text" id="tk_regurgitatsiya" name="tk_regurgitatsiya"><br>
-                <td colspan="2">Регургітація: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd1">мінімальна регургітація</option>
-                        <option value="dd2">легка регургітація</option>
-                        <option value="dd3">помірна регургітація</option>
-                        <option value="dd">важка регургітація</option>
-                    </select></td>
+<input type="text" id="tk_regurgitatsiya" name="tk_regurgitatsiya"><br>
+<td colspan="2">
+    Регургітація: 
+    <select name="m_reg" id="m_reg">
+        <option value="non">--</option>
+        <option value="dd1">мінімальна регургітація</option>
+        <option value="dd2">легка регургітація</option>
+        <option value="dd3">помірна регургітація</option>
+        <option value="dd4">важка регургітація</option>
+    </select>
+</td>
+
+<div id="additionalFields" style="display: none;">
+    <label for="max_gradient">Max Gradient:</label>
+    <input type="number" id="max_gradient" name="max_gradient"><br>
+    <label for="max_velocity">Max Velocity:</label>
+    <input type="number" id="max_velocity" name="max_velocity">
+</div>
+
+<script>
+    const mRegSelect = document.getElementById('m_reg');
+    const additionalFields = document.getElementById('additionalFields');
+
+    mRegSelect.addEventListener('change', function() {
+        if (this.value !== 'non') {
+            additionalFields.style.display = 'block';
+        } else {
+            additionalFields.style.display = 'none';
+        }
+    });
+</script>
+               
                 
                 <td colspan="2">Стулки: <select name="m_reg">
                         <option value="dd1">--</option>
@@ -145,6 +175,15 @@
                 
                 <label for="IVC">IVC</label>
                 <input type="text" id="IVC" name="IVC"><br>
+
+                <td colspan="2">Спадається: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">більше 75</option>
+                        <option value="dd3">більше 50</option>
+                        <option value="dd">менше 50</option>
+                        <option value="dd4">менше 20</option>
+                    </select></td>
+
                 <label for="lokalna_skorotliva">Локальна скоротлива здатність:</label>
                 <input type="text" id="lokalna_skorotliva" name="lokalna_skorotliva"><br>
                 <label for="perikard">Перикард:</label>
