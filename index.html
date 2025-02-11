@@ -14,9 +14,9 @@
         <div class="bsa-calculator">
             <h2>BSA Calculator</h2>
             <label for="height">Height (cm):</label>
-            <input type="number" id="height" name="height"><br>
+            <input type="number" class="highlighted" id="height" name="height"><br>
             <label for="weight">Weight (kg):</label>
-            <input type="number" id="weight" name="weight"><br>
+            <input type="number" class="highlighted" id="weight" name="weight"><br>
             <button type="button" onclick="calculateBSA()">Calculate BSA</button>
             <div id="bsa-result">BSA (m²): <span id="bsa"></span></div>
         </div>
@@ -26,9 +26,9 @@
                 <div class="grid-item">
                     <h2>Left Ventricle</h2>
                     <label for="lvedd">LVEDD (mm):</label>
-                    <input type="number" id="lvedd" name="lvedd"><br>
+                    <input type="number" class="highlighted" id="lvedd" name="lvedd"><br>
                     <label for="lvesd">LVESD (mm):</label>
-                    <input type="number" id="lvesd" name="lvesd"><br>
+                    <input type="number" class="highlighted" id="lvesd" name="lvesd"><br>
                     <label for="edv">EDV (ml) (Teichholz):</label>
                     <input type="number" id="edv" name="edv"><br>
                     <label for="esv">ESV (ml) (Teichholz):</label>
@@ -36,9 +36,9 @@
                     <label for="sv">SV (ml) (Teichholz):</label>
                     <input type="number" id="sv" name="sv"><br>
                     <label for="ivsd">IVSd (mm):</label>
-                    <input type="number" id="ivsd" name="ivsd"><br>
+                    <input type="number" class="highlighted" id="ivsd" name="ivsd"><br>
                     <label for="lvpwd">LVPWd (mm):</label>
-                    <input type="number" id="lvpwd" name="lvpwd"><br>
+                    <input type="number" class="highlighted" id="lvpwd" name="lvpwd"><br>
                     <label for="rwt">RWT:</label>
                     <input type="number" id="rwt" name="rwt"><br>
                     <label for="lvmi">LV Mass Index (g/m²):</label>
@@ -48,32 +48,32 @@
                     <label for="ef_simpson">EF Simpson (%):</label>
                     <input type="number" id="ef_simpson" name="ef_simpson"><br>
                     <label for="e_a">E/A:</label>
-                    <input type="text" id="e_a" name="e_a"><br>
+                    <input type="text" class="highlighted" id="e_a" name="e_a"><br>
                     <label for="diastolic_function">Diastolic function:</label>
                     <input type="text" id="diastolic_function" name="diastolic_function"><br>
                 </div>
                 <div class="grid-item">
                     <h2>Aorta</h2>
                     <label for="lvot_anulus">LVOT/Anulus (mm):</label>
-                    <input type="number" id="lvot_anulus" name="lvot_anulus"><br>
+                    <input type="number" class="highlighted" id="lvot_anulus" name="lvot_anulus"><br>
                     <label for="sinus">Sinus (mm):</label>
-                    <input type="number" id="sinus" name="sinus"><br>
+                    <input type="number" class="highlighted" id="sinus" name="sinus"><br>
                     <label for="ac_aorta">Ac aorta (mm):</label>
-                    <input type="number" id="ac_aorta" name="ac_aorta"><br>
+                    <input type="number" class="highlighted" id="ac_aorta" name="ac_aorta"><br>
                     <label for="la_diametr">LA diametr (mm):</label>
-                    <input type="number" id="la_diametr" name="la_diametr"><br>
+                    <input type="number" class="highlighted" id="la_diametr" name="la_diametr"><br>
                     <label for="la_volume">LA volume:</label>
-                    <input type="number" id="la_volume" name="la_volume"><br>
+                    <input type="number" class="highlighted" id="la_volume" name="la_volume"><br>
                     <label for="lavi">LAVI:</label>
                     <input type="number" id="lavi" name="lavi"><br>
                     <label for="basal">Basal (mm):</label>
-                    <input type="number" id="basal" name="basal"><br>
+                    <input type="number" class="highlighted" id="basal" name="basal"><br>
                     <label for="mid">Mid (mm):</label>
-                    <input type="number" id="mid" name="mid"><br>
+                    <input type="number" class="highlighted" id="mid" name="mid"><br>
                     <label for="pp">ΠΠ:</label>
-                    <input type="number" id="pp" name="pp"><br>
+                    <input type="number" class="highlighted" id="pp" name="pp"><br>
                     <label for="acct">ACCT (ms):</label>
-                    <input type="number" id="acct" name="acct"><br>
+                    <input type="number" class="highlighted" id="acct" name="acct"><br>
                     <label for="la_sp">LA SP (mm rt.st):</label>
                     <input type="number" id="la_sp" name="la_sp"><br>
                 </div>
@@ -100,8 +100,8 @@
                 <input type="text" id="ak_zminen" name="ak_zminen"><br>
 
                     <label for="ak_max_grad">АК макс град і шв:</label>
-                    <input type="number" id="ak_max_grad" name="ak_max_grad"><br>
-                    <input type="number" id="ak_max_grad" name="ak_max_grad"><br>
+                    <input type="number" class="highlighted" id="ak_max_grad" name="ak_max_grad"><br>
+                    <input type="number" class="highlighted" id="ak_max_grad" name="ak_max_grad"><br>
                                 
                 <td colspan="2">Стулки кількість: <select name="m_reg">
                         <option value="dd1">--</option>
@@ -185,11 +185,15 @@
                     </select></td>
 
                 <label for="lokalna_skorotliva">Локальна скоротлива здатність:</label>
-                <input type="text" id="lokalna_skorotliva" name="lokalna_skorotliva"><br>
+                <input type="text" class="highlighted" id="lokalna_skorotliva" name="lokalna_skorotliva"><br>
                 <label for="perikard">Перикард:</label>
-                <input type="text" id="perikard" name="perikard"><br>
+                <input type="text" class="highlighted" id="perikard" name="perikard"><br>
             </div>
-
+    <style>
+        .highlighted {
+    background-color: yellow;
+}
+    </style>
             <button type="button" onclick="calculateAll()">Calculate All</button>
         </form>
     </div>
