@@ -183,6 +183,78 @@
         .highlighted {
     background-color: yellow;
 }
+        /* Styling for the select element */
+select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-color: #fff; /* Set background color */
+    border: 1px solid #ccc; /* Add border */
+    padding: 5px 10px; /* Adjust padding */
+    font-size: 16px; /* Set font size */
+    border-radius: 5px; /* Add rounded corners */
+    width: 100%; /* Make select full-width */
+    box-sizing: border-box; /* Include padding and border in width */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='rgba(51, 51, 51, 1)' d='M7 10l5 5 5-5z'/%3e%3c/svg%3e"); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1.5em 1.5em;
+    padding-right: 30px; /* Adjust padding to make space for arrow */
+    cursor: pointer; /* Make cursor pointer on hover */
+}
+
+/* Style the options */
+select option {
+    font-size: 16px; /* Set font size */
+    padding: 5px; /* Add padding */
+}
+
+/* Hover effect for options */
+select option:hover {
+    background-color: #f0f0f0; /* Add hover background color */
+}
+
+/* Focus style for select */
+select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #4CAF50; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Add a subtle shadow */
+}
+
+/* Disable default select arrow in IE */
+select::-ms-expand {
+    display: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+    select {
+        font-size: 14px; /* Slightly smaller font size on mobile */
+        padding: 5px 25px; /* Adjust padding for smaller screens */
+        background-position: right 5px center; /* Position arrow */
+        background-size: 1.2em 1.2em; /* Adjust arrow size */
+    }
+
+    select option {
+        font-size: 14px; /* Slightly smaller font size on mobile */
+    }
+
+    /* You can add other mobile-specific styles here */
+}
+
+/* Specific style for the "m_reg" select */
+select[name="m_reg"] {
+    /* Add any specific styles you want for this select */
+    border-color: #007bff; /* Example: highlight the border */
+}
+
+/* Mobile Responsive Styles (Specific for m_reg) */
+@media (max-width: 600px) {
+    select[name="m_reg"] {
+        /* Add any specific mobile styles for this select */
+        font-size: 12px; /* Example: smaller font on mobile */
+    }
+}
     </style>
             <button type="button" onclick="calculateAll()">Calculate All</button>
         </form>
